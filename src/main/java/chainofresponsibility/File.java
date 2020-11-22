@@ -2,12 +2,9 @@ package chainofresponsibility;
 
 public class File {
 
-    enum Type { TEXT, PRESENTATION, AUDIO, VIDEO }
-
     private final Type type;
     private final String content;
-
-    public File( Type type, String content ) {
+    public File(Type type, String content) {
         this.type = type;
         this.content = content;
     }
@@ -24,4 +21,6 @@ public class File {
     public String toString() {
         return type + ": " + content;
     }
+
+    enum Type {TEXT, PRESENTATION, AUDIO, VIDEO}
 }

@@ -5,6 +5,14 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class ObserverGof {
 
+    public static void main(String[] args) {
+        Observable observable = new Observable();
+        new Observer1(observable);
+        new Observer2(observable);
+
+        observable.sendEvent("Hello World!");
+    }
+
     interface Listener {
         void onEvent(Object event);
     }
@@ -22,37 +30,30 @@ public class ObserverGof {
 
         public void sendEvent(Object event) {
             for (Listener listener : listeners.values()) {
-                listener.onEvent( event );
+                listener.onEvent(event);
             }
         }
     }
 
     public static class Observer1 {
         Observer1(Observable observable) {
-            observable.register( this, new Listener() {
+            observable.register(this, new Listener() {
                 @Override
-                public void onEvent( Object event ) {
+                public void onEvent(Object event) {
                     System.out.println(event);
                 }
-            } );
+            });
         }
     }
 
     public static class Observer2 implements Listener {
         Observer2(Observable observable) {
-            observable.register( this, this );
+            observable.register(this, this);
         }
+
         @Override
-        public void onEvent( Object event ) {
+        public void onEvent(Object event) {
             System.out.println(event);
         }
-    }
-
-    public static void main( String[] args ) {
-        Observable observable = new Observable();
-        new Observer1( observable );
-        new Observer2( observable );
-
-        observable.sendEvent( "Hello World!" );
     }
 }

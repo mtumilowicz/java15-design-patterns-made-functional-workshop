@@ -17,11 +17,11 @@ public class InterpreterLambda {
     public static int evaluate(String expression) {
         Stack<Integer> stack = new Stack<>();
         for (String s : expression.split(" ")) {
-            IntBinaryOperator op = opMap.get( s );
+            IntBinaryOperator op = opMap.get(s);
             if (op != null) {
                 int right = stack.pop();
                 int left = stack.pop();
-                stack.push(op.applyAsInt( left, right ));
+                stack.push(op.applyAsInt(left, right));
             } else {
                 stack.push(Integer.parseInt(s));
             }
@@ -29,9 +29,9 @@ public class InterpreterLambda {
         return stack.pop();
     }
 
-    public static void main( String[] args ) {
+    public static void main(String[] args) {
         String expression = "7 3 - 2 1 + *";
-        System.out.println( evaluate( expression ) );
+        System.out.println(evaluate(expression));
     }
 
 }

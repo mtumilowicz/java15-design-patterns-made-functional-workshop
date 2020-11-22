@@ -4,6 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CommandGof {
+    public static void main(String[] args) {
+        List<Command> tasks = new ArrayList<>();
+        tasks.add(new Logger("Hi"));
+        tasks.add(new FileSaver("Cheers"));
+        tasks.add(new Mailer("Bye"));
+
+        new Executor().execute(tasks);
+    }
+
     interface Command {
         void run();
     }
@@ -11,7 +20,7 @@ public class CommandGof {
     public static class Logger implements Command {
         public final String message;
 
-        public Logger( String message ) {
+        public Logger(String message) {
             this.message = message;
         }
 
@@ -24,7 +33,7 @@ public class CommandGof {
     public static class FileSaver implements Command {
         public final String message;
 
-        public FileSaver( String message ) {
+        public FileSaver(String message) {
             this.message = message;
         }
 
@@ -37,7 +46,7 @@ public class CommandGof {
     public static class Mailer implements Command {
         public final String message;
 
-        public Mailer( String message ) {
+        public Mailer(String message) {
             this.message = message;
         }
 
@@ -53,14 +62,5 @@ public class CommandGof {
                 task.run();
             }
         }
-    }
-
-    public static void main( String[] args ) {
-        List<Command> tasks = new ArrayList<>();
-        tasks.add(new Logger( "Hi" ));
-        tasks.add(new FileSaver( "Cheers" ));
-        tasks.add(new Mailer( "Bye" ));
-
-        new Executor().execute( tasks );
     }
 }

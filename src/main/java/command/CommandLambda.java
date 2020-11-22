@@ -17,16 +17,16 @@ public class CommandLambda {
         System.out.println("Sending: " + message);
     }
 
-    public static void execute(List<Runnable> tasks ) {
-        tasks.forEach( Runnable::run );
+    public static void execute(List<Runnable> tasks) {
+        tasks.forEach(Runnable::run);
     }
 
-    public static void main( String[] args ) {
+    public static void main(String[] args) {
         List<Runnable> tasks = new ArrayList<>();
         tasks.add(() -> log("Hi"));
         tasks.add(() -> save("Cheers"));
         tasks.add(() -> send("Bye"));
 
-        execute( tasks );
+        execute(tasks);
     }
 }

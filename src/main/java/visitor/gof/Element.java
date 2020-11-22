@@ -1,5 +1,5 @@
 package visitor.gof;
 
 interface Element {
-        <T> T accept(Visitor<T> visitor);
-    }
+    <T> T accept(Visitor<T> visitor);
+}
