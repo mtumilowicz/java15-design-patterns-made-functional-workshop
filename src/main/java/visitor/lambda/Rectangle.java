@@ -1,6 +1,6 @@
 package visitor.lambda;
 
-class Rectangle {
+class Rectangle implements Element {
     final double width;
     final double height;
 

@@ -1,6 +1,6 @@
 package visitor.lambda;
 
-class Square {
+class Square implements Element  {
     final double side;
 
     public Square(double side) {

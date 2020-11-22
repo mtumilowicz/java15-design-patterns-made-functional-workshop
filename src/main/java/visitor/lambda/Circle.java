@@ -1,6 +1,6 @@
 package visitor.lambda;
 
-class Circle {
+class Circle implements Element {
     final double radius;
 
     public Circle(double radius) {
