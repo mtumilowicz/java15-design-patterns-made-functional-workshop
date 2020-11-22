@@ -17,7 +17,7 @@ class LambdaVisitor<E, A> implements Function<E, A> {
     @Override
     public A apply(E o) {
         return Optional.ofNullable(fMap.get(o.getClass()))
-                .map(x -> x.apply(o))
+                .map(handler -> handler.apply(o))
                 .orElseThrow(() -> new RuntimeException("no handler for: " + o.getClass().toString()));
     }
 
