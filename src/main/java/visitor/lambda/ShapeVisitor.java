@@ -6,7 +6,7 @@ import java.util.function.Function;
 class ShapeVisitor {
 
     private static final Function<Object, Double> areaVisitor = new LambdaVisitor<Double>()
-            .addHandler(Square.class, (Square s) -> s.side * s.side)
+            .addHandler(Square.class, s -> s.side * s.side)
             .addHandler(Circle.class, c -> Math.PI * c.radius * c.radius)
             .addHandler(Rectangle.class, r -> r.height * r.width);
 
