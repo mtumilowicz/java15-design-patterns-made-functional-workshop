@@ -1,4 +1,4 @@
-package interpreter;
+package interpreter.lambda;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -6,6 +6,7 @@ import java.util.Stack;
 import java.util.function.IntBinaryOperator;
 
 public class InterpreterLambda {
+
     static Map<String, IntBinaryOperator> opMap = new HashMap<>();
 
     static {
@@ -28,10 +29,4 @@ public class InterpreterLambda {
         }
         return stack.pop();
     }
-
-    public static void main(String[] args) {
-        String expression = "7 3 - 2 1 + *";
-        System.out.println(evaluate(expression));
-    }
-
 }
