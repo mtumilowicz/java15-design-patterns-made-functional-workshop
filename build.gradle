@@ -6,13 +6,13 @@ plugins {
 group 'java12-functional-design-patterns-workshop'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 12
+sourceCompatibility = 15
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testCompile group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.5.8'
+    testCompile group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.5.13'
     testCompile group: 'org.spockframework', name: 'spock-core', version: '1.2-groovy-2.5'
 }
