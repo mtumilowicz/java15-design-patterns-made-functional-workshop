@@ -1,4 +1,4 @@
-package chainofresponsibility;
+package chain;
 
 public class ChainOfRespGoF {
 

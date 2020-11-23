@@ -4,9 +4,9 @@ import java.util.List;
 
 public class IteratorLambda {
 
-    static final List<Integer> list = List.of(1, 2, 3, 4, 5, 6);
+    static final List<Integer> list = List.of(1, 2, 3, 4, 5, 6, 7);
 
-    int sum() {
+    static int sum() {
         return list.stream()
                 .mapToInt(Integer::intValue)
                 .sum();

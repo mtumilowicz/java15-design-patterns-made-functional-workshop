@@ -1,4 +1,4 @@
-package chainofresponsibility;
+package chain;
 
 import java.util.Optional;
 import java.util.function.Function;
