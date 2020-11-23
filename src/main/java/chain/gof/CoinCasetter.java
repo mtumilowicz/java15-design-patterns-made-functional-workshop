@@ -1,6 +1,8 @@
 package chain.gof;
 
-public abstract class CoinCasetter {
+import chain.Coin;
+
+abstract class CoinCasetter {
 
     private final CoinCasetter next;
     private final Coin valueHandled;

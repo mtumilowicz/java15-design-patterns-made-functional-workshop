@@ -1,8 +1,9 @@
 package chain.gof
 
+import chain.Coin
 import spock.lang.Specification
 
-class VendingMachineTest extends Specification {
+class VendingMachineGofTest extends Specification {
 
     def "CountAssets"() {
         given:
@@ -10,7 +11,7 @@ class VendingMachineTest extends Specification {
         def c1 = new _1CoinCasetter(c0)
         def c2 = new _2CoinCasetter(c1)
         def c5 = new _5CoinCasetter(c2)
-        def machine = new VendingMachine(c5)
+        def machine = new VendingMachineGof(c5)
 
         when:
         machine.insert(Coin._1)
@@ -23,6 +24,5 @@ class VendingMachineTest extends Specification {
 
         then:
         machine.countAssets() == 15
-
     }
 }

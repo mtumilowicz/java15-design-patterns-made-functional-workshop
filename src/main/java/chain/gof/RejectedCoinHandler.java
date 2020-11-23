@@ -1,6 +1,8 @@
 package chain.gof;
 
-public class RejectedCoinHandler extends CoinCasetter {
+import chain.Coin;
+
+class RejectedCoinHandler extends CoinCasetter {
     protected RejectedCoinHandler() {
         super(null, null);
     }
