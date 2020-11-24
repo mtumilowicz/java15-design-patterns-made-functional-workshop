@@ -4,8 +4,8 @@
 # java15-design-patterns-made-functional-workshop
 * references
     * [OOP v̶s̶ and FP by Mario Fusco](https://www.youtube.com/watch?v=p6cZO5V2ehw)
-    * https://github.com/mariofusco/from-gof-to-lambda
     * [g ∘ f patterns by Mario Fusco](https://www.youtube.com/watch?v=Rmer37g9AZM)
+    * https://github.com/mariofusco/from-gof-to-lambda
     * https://en.wikipedia.org/wiki/First-class_citizen
     * https://en.wikipedia.org/wiki/First-class_function
     * https://www.quora.com/What-is-a-Single-Abstract-Method-SAM-interface-in-Java-8
