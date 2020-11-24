@@ -1,6 +1,6 @@
 package chain.lambda;
 
-public class CoinCasetter {
+class CoinCasetter {
     public final int sum;
 
     public CoinCasetter(int sum) {

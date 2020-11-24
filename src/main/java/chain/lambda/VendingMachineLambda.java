@@ -5,9 +5,8 @@ import chain.Coin;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.BiFunction;
-import java.util.function.Function;
 
-public class VendingMachineLambda {
+class VendingMachineLambda {
 
     private final CoinCasetter casetter;
     private final List<BiFunction<Coin, CoinCasetter, Optional<CoinCasetter>>> handlers;
@@ -17,12 +16,17 @@ public class VendingMachineLambda {
         this.handlers = handlers;
     }
 
-    VendingMachineLambda insert(Coin coin) {
-        var casetter = handlers.stream()
-                .flatMap(x -> x.apply(coin, this.casetter).stream())
-                .findAny()
-                .orElseThrow(() -> new RuntimeException("Unknown coin: " + coin));
+    VendingMachineLambda withNewCasetter(CoinCasetter casetter) {
         return new VendingMachineLambda(casetter, this.handlers);
+    }
+
+    VendingMachineLambda insert(Coin coin) {
+        return handlers.stream()
+                .map(handler -> handler.apply(coin, this.casetter))
+                .flatMap(Optional::stream)
+                .findAny()
+                .map(this::withNewCasetter)
+                .orElseThrow(() -> new RuntimeException("Unknown coin: " + coin));
     }
 
     int countAssets() {
