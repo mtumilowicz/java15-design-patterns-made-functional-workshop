@@ -43,4 +43,4 @@ Visitor                 | Map of functions
 
 * note that many more patterns from GOF could be rewritten in a more functional way by simply using 
 SAM conversion
-    * example: Observer
+    * example: `Observer`
