@@ -1,7 +1,7 @@
-[![Build Status](https://travis-ci.com/mtumilowicz/java15-functional-design-patterns-workshop.svg?branch=master)](https://travis-ci.com/mtumilowicz/java15-functional-design-patterns-workshop)
+[![Build Status](https://travis-ci.com/mtumilowicz/java15-design-patterns-made-functional-workshop.svg?branch=master)](https://travis-ci.com/mtumilowicz/java15-design-patterns-made-functional-workshop)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-# java12-functional-design-patterns-workshop
+# java15-design-patterns-made-functional-workshop
 * references
     * [OOP v̶s̶ and FP by Mario Fusco](https://www.youtube.com/watch?v=p6cZO5V2ehw)
     * https://github.com/mariofusco/from-gof-to-lambda
