@@ -5,15 +5,17 @@
     * https://github.com/mariofusco/from-gof-to-lambda
     * [g ∘ f patterns by Mario Fusco](https://www.youtube.com/watch?v=Rmer37g9AZM)
     
-# preface
+## preface
 * to refresh knowledge about design patterns please refer: https://github.com/mtumilowicz/designPatterns
 * goals of this workshop
-    * introduction to basic functional programming structures enabling 
+    * show some design patterns in a more functional way
+    * introduction to basic functional programming structures enabling neat design
+        * functions are first class
+        * streams
 * workshops: `/lambda/<Name>Workshop`
 * answers: `/lambda/<Name>`
 
-# mapping
-
+## mapping
 Pattern                 | Lambda
 ----------------------- | --------------
 Chain of Responsibility | Stream of functions
@@ -24,5 +26,6 @@ Strategy                | SAM
 Template                | SAM
 Visitor                 | Map of functions
 
-* note that many patterns from GOF could be rewritten in a more functional way by simply using 
+* note that many more patterns from GOF could be rewritten in a more functional way by simply using 
 Single Abstract Method (SAM) conversion
+    * example: Observer
