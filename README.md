@@ -7,3 +7,4 @@
     
 # preface
 * to refresh knowledge about design patterns please refer: https://github.com/mtumilowicz/designPatterns
+* strategy
