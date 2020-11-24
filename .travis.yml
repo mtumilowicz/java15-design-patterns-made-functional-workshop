@@ -1,0 +1,5 @@
+language: java
+jdk: openjdk15
+
+before_install:
+  - chmod +x gradlew
