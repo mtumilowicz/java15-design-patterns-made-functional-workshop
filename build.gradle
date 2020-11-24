@@ -3,7 +3,7 @@ plugins {
     id 'java'
 }
 
-group 'java12-functional-design-patterns-workshop'
+group 'java15-functional-design-patterns-workshop'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 15
